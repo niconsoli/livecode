@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>LiveCode - Aula 03</title>
+</head>
+<body>
+    <header>
+    <div class="container-nav">
+        <a href="index.html" class="logo-link">
+            <img src="logo.png" alt="LiveCode Logo" class="header-logo">
+        </a>
+        
+        <div class="menu">
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="index.html#aulas">Aulas</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </div>
+   </header>
+
+   <div class="aula-content">
+        <h1>Aula 03: Laços de Repetição (Loops for e while)</h1>
+
+        <p>A repetição de tarefas é uma das maiores vantagens da programação. Em Java, usamos os <span class="highlight">laços de repetição (loops)</span> para executar o mesmo bloco de código várias vezes, economizando linhas e otimizando o seu programa.</p>
+
+        <h2>O Laço for (Para contagens definidas)</h2>
+        <p>O `for` é ideal quando você sabe exatamente quantas vezes a repetição deve ocorrer. Ele exige três partes em sua definição, separadas por ponto e vírgula:</p>
+        
+        <ol>
+            <li><span class="highlight">Inicialização:</span> Executada apenas uma vez no início (ex: `int i = 0`).</li>
+            <li><span class="highlight">Condição:</span> Avaliada a cada repetição. Se for verdadeira, o loop continua. Se for falsa, o loop para.</li>
+            <li><span class="highlight">Incremento/Decremento:</span> Executado após cada repetição (ex: `i++` ou `i--`).</li>
+        </ol>
+
+        <div class="code-block">
+            <code>
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Contagem: " + i);
+}
+            </code>
+        </div>
+
+        <h2>O Laço while (Enquanto uma condição for verdadeira)</h2>
+        <p>O `while` é usado quando você não sabe de antemão quantas vezes a repetição ocorrerá. Ele executa o bloco de código <span class="highlight">enquanto</span> a condição especificada for verdadeira.</p>
+        <p>É crucial que a condição se torne falsa em algum momento dentro do loop, caso contrário, você terá um <span class="highlight">Loop Infinito</span>, que travará o programa.</p>
+
+        <div class="code-block">
+            <code>
+int contador = 0;
+
+while (contador < 3) {
+    System.out.println("Repetição número: " + (contador + 1));
+    contador++;
+}
+            </code>
+        </div>
+        
+        <h2>Exemplo Prático: Tabuada com for</h2>
+        <p>Vamos usar o `for` para gerar a tabuada de multiplicação de um número:</p>
+
+        <div class="code-block">
+            <code>
+int numero = 8;
+System.out.println("Tabuada de " + numero + ":");
+
+for (int i = 1; i <= 10; i++) {
+    int resultado = numero * i;
+    System.out.println(numero + " x " + i + " = " + resultado);
+}
+            </code>
+        </div>
+
+        <p>Com os laços `for` e `while`, você pode automatizar tarefas como processar listas de dados, simular eventos ou repetir ações até que o usuário atinja um objetivo. Na próxima aula, combinaremos tudo isso para permitir a entrada de dados pelo usuário, tornando seus programas interativos!</p>
+    </div>
+
+    <footer>
+    <div class="footer-content" id="contato">
+        <h3>Live<span class="highlight-code">Code</span></h3>
+        <p>Transformando ideias em código e aprendizados em conquistas desde 2024</p>
+        <ul class="socials">
+                
+        </ul>
+    </div>
+    <div id="footer-copyright">
+      <p>R. Daniel Daneli, 100 - Centro, Taubaté - SP <br>
+        12060-440 <br><br>
+        &#169
+        2024 Todos os direitos são reservados</p>  
+    </div>
+    </footer>
+</body>
+</html>

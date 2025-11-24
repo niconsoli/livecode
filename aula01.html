@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>LiveCode - Aula 01</title>
+</head>
+<body>
+   <header>
+    <div class="container-nav">
+        <a href="index.html" class="logo-link">
+            <img src="logo.png" alt="LiveCode Logo" class="header-logo">
+        </a>
+        
+        <div class="menu">
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="index.html#aulas">Aulas</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </div>
+   </header>
+
+   <div class="aula-content">
+        <h1>Aula 01: Variáveis e Tipos de Dados em Java</h1>
+
+        <p>Esta é a base de qualquer programa: como armazenamos e manipulamos informações. Em Java, as variáveis são como caixas rotuladas que guardam dados, e cada "caixa" precisa ter um "tipo" definido para saber qual tipo de informação ela pode conter (números, texto, etc.).</p>
+
+        <h2>O que são Variáveis?</h2>
+        <p>Uma variável é uma área de memória reservada para armazenar um valor. Para usar uma variável, precisamos primeiro <span class="highlight">declarar</span> ela. A declaração define o tipo de dado que a variável irá guardar e o nome que usaremos para acessá-la.</p>
+
+        <h2>Tipos de Dados Primitivos</h2>
+        <p>Java possui oito tipos primitivos, mas vamos focar nos mais comuns para iniciarmos:</p>
+
+        <ul>
+            <li><span class="highlight">int</span>: Usado para números inteiros (sem casas decimais), como $-10$, $0$, $42$.</li>
+            <li><span class="highlight">double</span>: Usado para números de ponto flutuante (com casas decimais), como $3.14$, $10.0$.</li>
+            <li><span class="highlight">char</span>: Usado para armazenar um único caractere, como 'A', '7', '$'.</li>
+            <li><span class="highlight">boolean</span>: Usado para armazenar valores de verdade, ou seja, apenas <span class="highlight">true</span> ou <span class="highlight">false</span>.</li>
+        </ul>
+
+        <h2>Declarando e Inicializando Variáveis</h2>
+        <p>A sintaxe básica para declarar uma variável é: <span class="highlight">`tipo nomeDaVariavel;`</span>. Para dar um valor inicial, usamos o operador de atribuição (`=`):</p>
+
+        <div class="code-block">
+            <code>
+int idade = 25;
+double preco = 19.99;
+char inicial = 'J';
+boolean estaLogado = true;
+int numeroDeAlunos;
+numeroDeAlunos = 15;
+            </code>
+        </div>
+
+        <h2>Exemplo Prático</h2>
+        <p>Veja como podemos usar variáveis em um pequeno programa para calcular a área de um círculo (usando $\pi \approx 3.14$):</p>
+
+        <div class="code-block">
+            <code>
+public class CalculadoraArea {
+    public static void main(String[] args) {
+        int raio = 5;
+        double PI = 3.14;
+        double area = PI * raio * raio;
+
+        System.out.println("O raio é: " + raio);
+        System.out.println("A área do círculo é: " + area);
+    }
+}
+            </code>
+        </div>
+        <p>Entender variáveis e tipos é o primeiro passo para criar programas que armazenam dados do mundo real. Na próxima aula, veremos como tomar decisões com esses dados usando estruturas condicionais!</p>
+    </div>
+
+    <footer>
+    <div class="footer-content" id="contato">
+        <h3>Live<span class="highlight-code">Code</span></h3>
+        <p>Transformando ideias em código e aprendizados em conquistas desde 2024</p>
+        <ul class="socials">
+                
+        </ul>
+    </div>
+    <div id="footer-copyright">
+      <p>R. Daniel Daneli, 100 - Centro, Taubaté - SP <br>
+        12060-440 <br><br>
+        &#169
+        2024 Todos os direitos são reservados</p>  
+    </div>
+    </footer>
+</body>
+</html>

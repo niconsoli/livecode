@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>LiveCode - Aula 02</title>
+</head>
+<body>
+    <header>
+    <div class="container-nav">
+        <a href="index.html" class="logo-link">
+            <img src="logo.png" alt="LiveCode Logo" class="header-logo">
+        </a>
+        
+        <div class="menu">
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="index.html#aulas">Aulas</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+        </div>
+    </div>
+   </header>
+
+   <div class="aula-content">
+        <h1>Aula 02: Estruturas Condicionais (if, else e switch)</h1>
+
+        <p>Programas não apenas processam dados, eles tomam decisões! As estruturas condicionais em Java permitem que o seu código execute diferentes blocos de instrução dependendo se uma condição é <span class="highlight">verdadeira</span> (`true`) ou <span class="highlight">falsa</span> (`false`).</p>
+
+        <h2>Operadores de Comparação</h2>
+        <p>Para construir a condição, usamos operadores de comparação. A condição sempre deve retornar um valor booleano (`true` ou `false`):</p>
+        
+        <div class="table-container">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Significado</th>
+                        <th>Exemplo</th>
+                        <th>Resultado (se x=10)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="highlight">==</span></td>
+                        <td>Igual a</td>
+                        <td>x == 10</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">!=</span></td>
+                        <td>Diferente de</td>
+                        <td>x != 5</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">></span></td>
+                        <td>Maior que</td>
+                        <td>x > 10</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight"><</span></td>
+                        <td>Menor que</td>
+                        <td>x < 15</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight">>=</span></td>
+                        <td>Maior ou igual a</td>
+                        <td>x >= 10</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td><span class="highlight"><=</span></td>
+                        <td>Menor ou igual a</td>
+                        <td>x <= 9</td>
+                        <td>false</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2>A Estrutura if e else</h2>
+        <p>A instrução <span class="highlight">if</span> executa um bloco de código se a condição for verdadeira. O <span class="highlight">else</span> é opcional e executa um bloco alternativo se a condição for falsa.</p>
+
+        <div class="code-block">
+            <code>
+int nota = 7;
+
+if (nota >= 7) {
+    System.out.println("Parabéns! Você foi aprovado.");
+} else {
+    System.out.println("Infelizmente, você precisa estudar mais.");
+}
+            </code>
+        </div>
+        
+        <h2>Múltiplas Condições (else if)</h2>
+        <p>Para testar múltiplas possibilidades em sequência, usamos o <span class="highlight">else if</span>:</p>
+
+        <div class="code-block">
+            <code>
+int hora = 14;
+
+if (hora < 12) {
+    System.out.println("Bom dia!");
+} else if (hora < 18) {
+    System.out.println("Boa tarde!");
+} else {
+    System.out.println("Boa noite!");
+}
+            </code>
+        </div>
+
+        <h2>Operadores Lógicos</h2>
+        <p>Podemos combinar múltiplas condições usando operadores lógicos:</p>
+        <ul>
+            <li><span class="highlight">&&</span> (AND lógico): Verdadeiro se TODAS as condições forem verdadeiras.</li>
+            <li><span class="highlight">||</span> (OR lógico): Verdadeiro se PELO MENOS UMA das condições for verdadeira.</li>
+            <li><span class="highlight">!</span> (NOT lógico): Inverte o valor booleano.</li>
+        </ul>
+
+        <div class="code-block">
+            <code>
+int idade = 17;
+boolean possuiHabilitacao = false;
+
+if (idade >= 18 && possuiHabilitacao) {
+    System.out.println("Pode dirigir.");
+} else {
+    System.out.println("Não pode dirigir.");
+}
+            </code>
+        </div>
+
+        <p>Com as estruturas condicionais, seus programas podem tomar decisões complexas e responder de forma inteligente a diferentes situações. Na próxima aula, aprenderemos a automatizar tarefas repetitivas com laços de repetição.</p>
+    </div>
+
+    <footer>
+    <div class="footer-content" id="contato">
+        <h3>Live<span class="highlight-code">Code</span></h3>
+        <p>Transformando ideias em código e aprendizados em conquistas desde 2024</p>
+        <ul class="socials">
+                
+        </ul>
+    </div>
+    <div id="footer-copyright">
+      <p>R. Daniel Daneli, 100 - Centro, Taubaté - SP <br>
+        12060-440 <br><br>
+        &#169
+        2024 Todos os direitos são reservados</p>  
+    </div>
+    </footer>
+</body>
+</html>
